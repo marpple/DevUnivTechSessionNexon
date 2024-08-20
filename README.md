@@ -1,4 +1,4 @@
-## 테크 세션 예제 실행
+# MDU Tech Session - Nexon
 
 ```
 pnpm install
