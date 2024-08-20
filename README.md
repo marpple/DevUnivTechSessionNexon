@@ -1,5 +1,5 @@
 ```
 pnpm install
-cd apps/session/
+cd apps/example/
 pnpm rune dev
 ```
