@@ -1,4 +1,4 @@
-# MARPPLE Dev Univ Tech Session - Nexon
+# MarppleDevUniv Tech Session - Nexon
 
 ```
 pnpm install
