@@ -32,3 +32,5 @@ server.use((req, res, next) => {
 });
 
 server.get(ClientRouter['/session1'].toString(), session1RenderHandler(ClientRouter['/session1']));
+
+server.get(ClientRouter['/session2'].toString(), session1RenderHandler(ClientRouter['/session2']));
