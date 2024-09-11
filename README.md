@@ -20,6 +20,6 @@ pnpm rune dev
 - 주소: http://localhost:6001/session3 (접속 후 크롬 콘솔창 열기)
 - 코드: [/apps/example/src/pages/session3/session3.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session3/session3.ts)
 
-### 4회 값으로 다루는, 지연성으로 다루는 비동기 프로그래밍
+### 4회 비동기 에러 핸들링
 - 주소: http://localhost:6001/session4 (접속 후 크롬 콘솔창 열기)
 - 코드: [/apps/example/src/pages/session4/session4.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session4/session4.ts)
