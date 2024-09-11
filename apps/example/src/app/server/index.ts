@@ -4,6 +4,9 @@ import UAParser from 'ua-parser-js';
 import favicon from '../../../public/favicon.png';
 import { ClientRouter } from '../route';
 import { session1RenderHandler } from '../../pages/session1/session1RenderHandler';
+import { session2RenderHandler } from "../../pages/session2/session2RenderHandler";
+import { session3RenderHandler } from "../../pages/session3/session3RenderHandler";
+import { session4RenderHandler } from "../../pages/session4/session4RenderHandler";
 
 const server = app();
 server.use((req, res, next) => {
@@ -33,6 +36,8 @@ server.use((req, res, next) => {
 
 server.get(ClientRouter['/session1'].toString(), session1RenderHandler(ClientRouter['/session1']));
 
-server.get(ClientRouter['/session2'].toString(), session1RenderHandler(ClientRouter['/session2']));
+server.get(ClientRouter['/session2'].toString(), session2RenderHandler(ClientRouter['/session2']));
 
-server.get(ClientRouter['/session3'].toString(), session1RenderHandler(ClientRouter['/session3']));
+server.get(ClientRouter['/session3'].toString(), session3RenderHandler(ClientRouter['/session3']));
+
+server.get(ClientRouter['/session4'].toString(), session4RenderHandler(ClientRouter['/session4']));
