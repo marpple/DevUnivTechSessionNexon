@@ -1,7 +1,3 @@
-// 비동기 에러 핸들링
-// AsyncGenerator/AsyncIterator/AsyncIterable
-// LISP + AsyncIterable + Class 조합
-
 const { log } = console;
 
 export async function main() {
@@ -77,9 +73,9 @@ export async function main() {
       map(img => img.height,
         map(info => loadImage(info), imgs)));
 
-  // getHeight(imgs).then(log);
-  // getHeight(imgs2).catch(() => 0).then(log);
-  // getHeight(imgs2).then(log).catch((e) => console.error(e));
+  getHeight(imgs).then(log);
+  getHeight(imgs2).catch(() => 0).then(log);
+  getHeight(imgs2).then(log).catch((e) => console.error(e));
 
   function* map(f, iterable) {
     const iterator = iterable[Symbol.iterator]();
@@ -112,58 +108,5 @@ export async function main() {
 
   // - sentry.io 같은 서비스를 이용하여 발생되는
   //   모든 에러를 볼 수 있도록 하는 것이 더 좋은 해법입니다.
-
-  // ---------
-
-  // 2. LISP + AsyncIterable + Class 조합
-
-  type IteratorNext<T> =
-    { done?: false; value: T; } |
-    { done: true; value: undefined; };
-
-  interface Iterator<T> {
-    next(): IteratorNext<T>;
-  }
-
-  interface Iterable<T> {
-    [Symbol.iterator](): Iterator<T>;
-  }
-
-  interface AsyncIterator<T> {
-    next(): Promise<IteratorNext<T>>;
-  }
-
-  interface AsyncIterable<T> {
-    [Symbol.asyncIterator](): AsyncIterator<T>;
-  }
-
-  function isIterable<T = unknown>(a: Iterable<T> | unknown): a is Iterable<T> {
-    return typeof a?.[Symbol.iterator] === "function";
-  }
-
-  // Promise, delay
-  function delay<T>(time: number, value: T): Promise<T> {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(value), time);
-    });
-  }
-
-  // toAsync
-
-  // mapSync
-
-  // mapAsync
-
-  // filterSync
-
-  // filterAsync
-
-  // reduceSync
-
-  // reduceAsync
-
-  // map, filter, reduce
-
-  // FxIterable, FxAsyncIterable
 }
 
