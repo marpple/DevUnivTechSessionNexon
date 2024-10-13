@@ -329,7 +329,7 @@ export async function main() {
       return fx(filter(f, this));
     }
 
-    reduce<B>(f: (acc: B, a: A) => B, acc: B) {
+    reduce<B>(f: (acc: B, a: A) => B | Promise<B>, acc: B) {
       return reduce(f, acc, this);
     }
   }
