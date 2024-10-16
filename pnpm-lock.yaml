@@ -88,8 +88,8 @@ importers:
   apps/example:
     dependencies:
       '@fxts/core':
-        specifier: ^0.28.1
-        version: 0.28.1
+        specifier: ^1.1.0
+        version: 1.1.0
       '@rune-ts/server':
         specifier: ^1.0.14
         version: 1.0.14
@@ -411,8 +411,8 @@ packages:
     dependencies:
       tslib: 2.6.2
 
-  /@fxts/core@0.28.1:
-    resolution: {integrity: sha512-4W0fo6s/vCt+5/08zpL/ujZlxavX7GP/tvyMX7saI+4iv4kuDou9BKpXXuNuK3GmGK1oNEfQCYRSQgps7HBK8g==}
+  /@fxts/core@1.1.0:
+    resolution: {integrity: sha512-d4D2bGVV0l176RI0R6Omm3ect9i8fTfajcEe+l+2axzHxSkzgvumaRbQ0ViKSFF7DY1aqzVAiTiHj6HipjTCpg==}
     dependencies:
       tslib: 2.6.2
     dev: false

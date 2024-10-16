@@ -7,6 +7,8 @@ import { session1RenderHandler } from '../../pages/session1/session1RenderHandle
 import { session2RenderHandler } from "../../pages/session2/session2RenderHandler";
 import { session3RenderHandler } from "../../pages/session3/session3RenderHandler";
 import { session4RenderHandler } from "../../pages/session4/session4RenderHandler";
+import { session5RenderHandler } from "../../pages/session5/session5RenderHandler";
+import { session6RenderHandler } from "../../pages/session6/session6RenderHandler";
 
 const server = app();
 server.use((req, res, next) => {
@@ -42,4 +44,6 @@ server.get(ClientRouter['/session3'].toString(), session3RenderHandler(ClientRou
 
 server.get(ClientRouter['/session4'].toString(), session4RenderHandler(ClientRouter['/session4']));
 
-server.get(ClientRouter['/session5'].toString(), session4RenderHandler(ClientRouter['/session5']));
+server.get(ClientRouter['/session5'].toString(), session5RenderHandler(ClientRouter['/session5']));
+
+server.get(ClientRouter['/session6'].toString(), session6RenderHandler(ClientRouter['/session6']));
