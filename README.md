@@ -33,3 +33,7 @@ pnpm rune dev
 - 코드: 
   - [실전 데이터 사용](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session6/session6.ts)
   - [백엔드 결제 누락 스케줄러](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session6/session6-2.ts)
+
+### 7회 멀티패러다임 프로그래밍
+- 주소: http://localhost:6001/session7 (접속 후 크롬 콘솔창 열기)
+- 코드: [/apps/example/src/pages/session7/session7.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session7/session7.ts)
