@@ -50,3 +50,5 @@ server.get(ClientRouter['/session5'].toString(), session5RenderHandler(ClientRou
 server.get(ClientRouter['/session6'].toString(), session6RenderHandler(ClientRouter['/session6']));
 
 server.get(ClientRouter['/session7'].toString(), session7RenderHandler(ClientRouter['/session7']));
+
+server.get(ClientRouter['/session8'].toString(), session7RenderHandler(ClientRouter['/session8']));
