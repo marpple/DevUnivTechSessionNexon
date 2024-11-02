@@ -36,8 +36,8 @@ class SettingListView extends View<Setting[]> {
 }
 
 class SettingPage extends View<Setting[]> {
-  private _checkAllView = new SwitchView({ on: false });
   private _listView = new SettingListView(this.data);
+  private _checkAllView = new SwitchView({ on: this._isCheckAll() });
 
   override template() {
     return html`
@@ -76,8 +76,8 @@ class SettingPage extends View<Setting[]> {
 export async function main() {
   const settings: Setting[] = [
     { title: 'Wifi', on: true },
-    { title: 'Bluetooth', on: false },
-    { title: 'AirDrop', on: false },
+    { title: 'Bluetooth', on: true },
+    { title: 'AirDrop', on: true },
   ];
 
   document.querySelector('#body')!.append(
