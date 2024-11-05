@@ -10,6 +10,8 @@ import { session4RenderHandler } from "../../pages/session4/session4RenderHandle
 import { session5RenderHandler } from "../../pages/session5/session5RenderHandler";
 import { session6RenderHandler } from "../../pages/session6/session6RenderHandler";
 import { session7RenderHandler } from "../../pages/session7/session7RenderHandler";
+import { session8RenderHandler } from "../../pages/session8/session8RenderHandler";
+import { session9RenderHandler } from "../../pages/session9/session9RenderHandler";
 
 const server = app();
 server.use((req, res, next) => {
@@ -51,4 +53,6 @@ server.get(ClientRouter['/session6'].toString(), session6RenderHandler(ClientRou
 
 server.get(ClientRouter['/session7'].toString(), session7RenderHandler(ClientRouter['/session7']));
 
-server.get(ClientRouter['/session8'].toString(), session7RenderHandler(ClientRouter['/session8']));
+server.get(ClientRouter['/session8'].toString(), session8RenderHandler(ClientRouter['/session8']));
+
+server.get(ClientRouter['/session9'].toString(), session9RenderHandler(ClientRouter['/session9']));

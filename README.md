@@ -41,3 +41,7 @@ pnpm rune dev
 ### 8회 객체지향 프로그래밍 1
 - 주소: http://localhost:6001/session8 (접속 후 크롬 콘솔창 열기)
 - 코드: [/apps/example/src/pages/session8/session8.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session8/session8.ts)
+
+### 9회 객체지향 프로그래밍 2, 그런데 멀티패러다임을 곁들인
+- 주소: http://localhost:6001/session9 (접속 후 크롬 콘솔창 열기)
+- 코드: [/apps/example/src/pages/session9/session9.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session9/session9.ts)
