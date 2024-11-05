@@ -44,4 +44,5 @@ pnpm rune dev
 
 ### 9회 객체지향 프로그래밍 2, 그런데 멀티패러다임을 곁들인
 - 주소: http://localhost:6001/session9 (접속 후 크롬 콘솔창 열기)
-- 코드: [/apps/example/src/pages/session9/session9.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session9/session9.ts)
+- 설정앱: [/apps/example/src/pages/session9/apps/setting.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session9/apps/setting.ts)
+- 투두앱: [/apps/example/src/pages/session9/apps/todo.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session9/apps/todo.ts)
