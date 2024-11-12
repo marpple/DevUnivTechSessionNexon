@@ -104,7 +104,7 @@ class TodoPage extends View<Todo[]> {
   }
 }
 
-export function todo2() {
+export function todo3() {
   const todos: Todo[] = [
     { title: 'Coding', completed: false },
     { title: 'Dinner', completed: true },
@@ -112,10 +112,14 @@ export function todo2() {
   ];
 
   const todoPage = new TodoPage(todos);
-  // window.todoPage = todoPage;
   // window.FilterState = FilterState
 
   document.querySelector('#body')!.append(
     todoPage.render()
   );
+
+  todoPage.addFilterState(new FilterState(
+    'C로 시작',
+    todo => todo.title.startsWith('C')
+  ));
 }

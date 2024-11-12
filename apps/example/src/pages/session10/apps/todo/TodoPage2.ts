@@ -89,9 +89,13 @@ export function todo2() {
   ];
 
   const todoPage = new TodoPage(todos);
-  // window.todoPage = todoPage;
 
   document.querySelector('#body')!.append(
     todoPage.render()
   );
+
+  todoPage.addFilterState({
+    title: '긴급',
+    predicate: todo => todo.title.includes('긴급') && !todo.completed
+  });
 }
