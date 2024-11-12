@@ -1,0 +1,70 @@
+@startuml
+class CheckView {
+  - _toggle
+  + setOn()
+  -- dispatch --
+  ~ Toggled({ detail: data.on })
+}
+
+class InputTextReturnEnterView {
+  + returnValue: string
+  -- dispatch --
+  ~ InputTextReturned({ detail: returnValue })
+}
+
+class SegmentControlView {
+  + selectedIndex: number
+  + selectedSegment(): Segment
+  -- dispatch --
+  ~ SegmentSelected({ detail: selectedSegment() })
+}
+
+
+class TodoItemView {
+  + data: Todo
+  - _checkView: CheckView
+  - _syncCompleted()
+  + setCompleted()
+  -- dispatch --
+  ~ TodoRemoveRequested({ detail: Todo })
+}
+
+TodoItemView::_syncCompleted <-- CheckView::Toggled #green;text:green
+
+class TodoListView {
+  + itemViews: TodoItemView[]
+  + append()
+  + remove()
+  + set()
+}
+
+TodoListView::remove <-- TodoItemView::TodoRemoveRequested #green;text:green
+
+class CheckListController {
+  - _checkAll()
+  + checkAllView: ToggleView
+  + listView: ListView
+  + isCheckAll(): boolean
+  + syncCheckAll()
+}
+
+CheckListController::_checkAll <-- CheckView::Toggled #green;text:green
+CheckListController::syncCheckAll <-- CheckView::Toggled #green;text:green
+
+class TodoPage {
+  - _inputTextReturnEnterView
+  - _checkListController: CheckListController
+  - _filterView: SegmentControlView
+  - _filterState: FilterState
+  - _append()
+  - _remove()
+  - _refresh() (set, syncCheckAll)
+}
+
+
+TodoPage::_remove <-- TodoItemView::TodoRemoveRequested #green;text:green
+TodoPage::_append <-- InputTextReturnEnterView::InputTextReturned #green;text:green
+TodoPage::_refresh <-- SegmentControlView::SegmentSelected #green;text:green
+
+
+@enduml

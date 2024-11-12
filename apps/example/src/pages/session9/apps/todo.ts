@@ -1,10 +1,8 @@
 import {html, View} from "rune-ts";
 import {CheckView} from "../ui/CheckView";
 import {Toggled} from "../ui/Toggled";
-import {SwitchView} from "../ui/SwichView";
 import {ListView} from "../ui/ListView";
-import {CheckableViewController} from "../ui/CheckableViewController";
-import {CheckListController} from "../ui/CheckListController";
+import {CheckAllController} from "../ui/CheckAllController";
 
 interface Todo {
   title: string;
@@ -44,8 +42,8 @@ class TodoListView extends ListView<Todo, TodoItemView> {
 }
 
 class TodoPage extends View<Todo[]> {
-  private _checkListViewController = new CheckListController(
-    new CheckView({ on: false }),
+  private _checkAllController = new CheckAllController(
+    new CheckView(),
     new TodoListView(this.data),
     (itemView) => itemView.data.completed,
     (itemView, bool) => itemView.setCompleted(bool)
@@ -55,11 +53,11 @@ class TodoPage extends View<Todo[]> {
     return html`
       <div>
         <div class="header">
-          ${this._checkListViewController.checkAllView}
+          ${this._checkAllController.checkAllView}
           <input type="text">
         </div>
         <div class="body">
-          ${this._checkListViewController.listView}
+          ${this._checkAllController.listView}
         </div>
       </div>
     `;

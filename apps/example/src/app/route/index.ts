@@ -8,6 +8,7 @@ import { Session6Route } from "../../pages/session6/session6Route";
 import { Session7Route } from "../../pages/session7/session7Route";
 import { Session8Route } from "../../pages/session8/session8Route";
 import { Session9Route } from "../../pages/session9/session9Route";
+import { Session10Route } from "../../pages/session10/session10Route";
 
 type RouterType = typeof Session1Route
   & typeof Session2Route
@@ -19,6 +20,7 @@ type RouterType = typeof Session1Route
   & typeof Session7Route
   & typeof Session8Route
   & typeof Session9Route
+  & typeof Session10Route
 ;
 
 export const ClientRouter = createRouter<RouterType>({
@@ -31,4 +33,5 @@ export const ClientRouter = createRouter<RouterType>({
   ...Session7Route,
   ...Session8Route,
   ...Session9Route,
+  ...Session10Route,
 });

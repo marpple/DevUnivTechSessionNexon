@@ -1,0 +1,79 @@
+@startuml
+
+ToggleView <|-- CheckView
+
+class ToggleView {
+  - _toggle
+  + setOn()
+  -- dispatch --
+  ~ Toggled({ detail: data.on })
+}
+
+class CheckView {
+  + template()
+}
+
+class InputTextReturnEnterView {
+  + returnValue: string
+  -- dispatch --
+  ~ InputTextReturned({ detail: returnValue })
+}
+
+class SegmentControlView {
+  + selectedIndex: number
+  + selectedSegment(): Segment
+  -- dispatch --
+  ~ SegmentSelected({ detail: selectedSegment() })
+}
+
+class TodoItemView {
+  + data: Todo
+  - _checkView
+  - _syncCompleted()
+  + setCompleted()
+  -- dispatch --
+  ~ TodoRemoveRequested({ detail: Todo })
+}
+
+TodoItemView::_checkView --* CheckView
+
+class ListView {
+  + append()
+  + remove()
+  + set()
+}
+
+ListView <|-- TodoListView
+
+TodoListView::itemViews --* TodoItemView
+
+class TodoListView {
+  + itemViews: TodoItemView[]
+  -- listen --
+  ~ TodoItemView::TodoRemoveRequested
+}
+
+class CheckListController {
+  + checkAllView: ToggleView
+  + listView: ListView
+  - _checkAll()
+  + isCheckAll(): boolean
+  + syncCheckAll()
+}
+
+class TodoPage {
+  - _inputTextReturnEnterView
+  - _checkListController: CheckListController
+  - _filterView: SegmentControlView
+  - _filterState: FilterState
+  - _append()
+  - _remove()
+  - _refresh() (set, syncCheckAll)
+}
+
+TodoPage::_filterView --* SegmentControlView
+TodoPage::_inputTextReturnEnterView --* InputTextReturnEnterView
+TodoPage::_checkListController --* CheckListController
+CheckListController::listView --* TodoListView
+
+@enduml

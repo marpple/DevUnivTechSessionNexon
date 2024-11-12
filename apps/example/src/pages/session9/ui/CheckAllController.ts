@@ -3,7 +3,7 @@ import type {View} from "rune-ts";
 import type {ToggleView} from "./ToggleView";
 import type {ListView} from "./ListView"; {}
 
-export class CheckListController<T extends object, IV extends View<T>> {
+export class CheckAllController<T extends object, IV extends View<T>> {
   constructor(
     public checkAllView: ToggleView,
     public listView: ListView<T, IV>,

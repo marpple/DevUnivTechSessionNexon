@@ -1,7 +1,6 @@
-import {html, View} from "rune-ts";
+import {html, View, ListView} from "rune-ts";
 import {SwitchView} from "../ui/SwichView";
-import {ListView} from "../ui/ListView";
-import {CheckAllController} from "../ui/CheckAllController";
+import {CheckListController} from "../ui/CheckListController";
 
 const log = console.log;
 
@@ -24,13 +23,11 @@ class SettingItemView extends View<Setting> {
 }
 
 class SettingListView extends ListView<Setting, SettingItemView> {
-  createItemView(itemData: Setting) {
-    return new SettingItemView(itemData);
-  }
+  ItemView = SettingItemView;
 }
 
 class SettingPage extends View<Setting[]> {
-  private _checkAllController = new CheckAllController(
+  private _checkListController = new CheckListController(
     new SwitchView(),
     new SettingListView(this.data),
     (itemView) => itemView.data.on,
@@ -42,10 +39,10 @@ class SettingPage extends View<Setting[]> {
       <div>
         <div class="header">
           <h2>Setting</h2>
-          ${this._checkAllController.checkAllView}
+          ${this._checkListController.checkAllView}
         </div>
         <div class="body">
-          ${this._checkAllController.listView}
+          ${this._checkListController.listView}
         </div>
       </div>
     `;
