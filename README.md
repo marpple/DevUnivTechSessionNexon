@@ -50,5 +50,5 @@ pnpm rune dev
 ### 10회 객체지향 프로그래밍 3
 - 주소: http://localhost:6001/session10
 - 투두앱: [/apps/example/src/pages/session10/apps/todo/todoPage.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session10/apps/todo/TodoPage.ts)
-- 상태 패턴 1: [/apps/example/src/pages/session10/apps/todo/todoPage2.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session10/apps/todo/TodoPage.ts)
+- 상태 패턴 1: [/apps/example/src/pages/session10/apps/todo/todoPage2.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session10/apps/todo/TodoPage2.ts)
 - 상태 패턴 2: [/apps/example/src/pages/session10/apps/todo/todoPage3.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session10/apps/todo/TodoPage3.ts)
