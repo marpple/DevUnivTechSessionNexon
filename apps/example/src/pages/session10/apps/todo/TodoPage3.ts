@@ -42,12 +42,6 @@ class TodoPage extends View<Todo[]> {
     (itemView, bool) => itemView.setCompleted(bool)
   );
 
-  // private _filterStates: FilterState[] = [
-  //   { title: 'All', predicate: () => true },
-  //   { title: 'Active', predicate: todo => !todo.completed },
-  //   { title: 'Completed', predicate: todo => todo.completed },
-  // ];
-
   private _filterStates: FilterState[] = [
     new FilterState('All', () => true),
     new FilterState('Active', todo => !todo.completed),
