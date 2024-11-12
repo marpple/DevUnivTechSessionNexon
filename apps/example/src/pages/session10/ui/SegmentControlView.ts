@@ -21,9 +21,9 @@ export class SegmentControlView extends ListView<Segment, SegmentItemView> {
 
   selectedIndex: number;
 
-  constructor(data: Segment[]) {
+  constructor(data: Segment[], selectedIndex?: number) {
     super(data);
-    this.selectedIndex = Math.max(0, this.data.findIndex((segment) => segment.selected));
+    this.selectedIndex = selectedIndex ?? Math.max(0, this.data.findIndex((segment) => segment.selected));
     this.data[this.selectedIndex].selected = true;
   }
 
