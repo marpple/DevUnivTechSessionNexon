@@ -39,10 +39,16 @@ pnpm rune dev
 - 코드: [/apps/example/src/pages/session7/session7.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session7/session7.ts)
 
 ### 8회 객체지향 프로그래밍 1
-- 주소: http://localhost:6001/session8 (접속 후 크롬 콘솔창 열기)
+- 주소: http://localhost:6001/session8
 - 코드: [/apps/example/src/pages/session8/session8.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session8/session8.ts)
 
 ### 9회 객체지향 프로그래밍 2, 그런데 멀티패러다임을 곁들인
-- 주소: http://localhost:6001/session9 (접속 후 크롬 콘솔창 열기)
+- 주소: http://localhost:6001/session9
 - 설정앱: [/apps/example/src/pages/session9/apps/setting.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session9/apps/setting.ts)
 - 투두앱: [/apps/example/src/pages/session9/apps/todo.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session9/apps/todo.ts)
+
+### 10회 객체지향 프로그래밍 3
+- 주소: http://localhost:6001/session10
+- 투두앱: [/apps/example/src/pages/session10/apps/todo/todoPage.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session10/apps/todo/todoPage.ts)
+- 상태 패턴 1: [/apps/example/src/pages/session10/apps/todo/todoPage2.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session10/apps/todo/todoPage2.ts)
+- 상태 패턴 2: [/apps/example/src/pages/session10/apps/todo/todoPage3.ts](https://github.com/marpple/DevUnivTechSessionNexon/blob/main/apps/example/src/pages/session10/apps/todo/todoPage3.ts)
